@@ -645,7 +645,14 @@ fn msi(root: &Path, arch: WinArch) -> io::Result<()> {
         return Err(io::Error::other(format!("no bundle in {}: run cargo xtask windows (or msi) first", bundle.display())));
     }
     let version = env!("CARGO_PKG_VERSION");
-    let name = format!("Kiri-{version}-{}.msi", arch.msi());
+    // KIRI_MSI_CULTURE=uk-UA builds that language's installer from
+    // installer/windows/kiri.<culture>.wxl, as Kiri-<version>-<arch>-<culture>.msi,
+    // and leaves the update feed to the English one.
+    let culture = std::env::var("KIRI_MSI_CULTURE").ok().filter(|c| !c.is_empty() && c != "en-US");
+    let name = match &culture {
+        Some(c) => format!("Kiri-{version}-{}-{c}.msi", arch.msi()),
+        None => format!("Kiri-{version}-{}.msi", arch.msi()),
+    };
     let out = root.join("target").join(&name);
     // The dialog art (brand/installer/windows, committed) gets this build's
     // version stamped onto a copy in target/wix-assets, with System.Drawing
@@ -680,6 +687,12 @@ fn msi(root: &Path, arch: WinArch) -> io::Result<()> {
         .arg(format!("Size={on_disk:.1} MB"));
     if drawn {
         wix.arg("-d").arg(format!("Assets={}", assets.display()));
+    }
+    if let Some(c) = &culture {
+        let loc = format!("kiri.{c}.wxl");
+        run(wix.args(["-culture", c.as_str(), "-loc", loc.as_str(), "-o"]).arg(&out).arg("kiri.wxs"))?;
+        println!("{}", out.display());
+        return Ok(());
     }
     run(wix.args(["-loc", "kiri.wxl", "-o"]).arg(&out).arg("kiri.wxs"))?;
     // The update feed entry kiri-win reads (crates/kiri-win/src/update.rs),

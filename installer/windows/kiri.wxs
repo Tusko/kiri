@@ -52,8 +52,7 @@
            Version="$(Version)"
            UpgradeCode="7C2E4B9A-5D13-4F8E-9B6A-0E1D3C5A7F21"
            Scope="perUser"
-           Language="1033"
-           Codepage="1252"
+           Language="!(loc.KiriLanguage)"
            InstallerVersion="500"
            Compressed="yes">
 
@@ -62,7 +61,7 @@
                         Comments="$(Description). Docker API on Windows with the engine in WSL2."
                         Manufacturer="$(Manufacturer)" />
 
-    <MajorUpgrade DowngradeErrorMessage="A newer version of $(Name) is already installed."
+    <MajorUpgrade DowngradeErrorMessage="!(loc.KiriDowngrade)"
                   AllowSameVersionUpgrades="yes"
                   Schedule="afterInstallInitialize" />
     <MediaTemplate EmbedCab="yes" CompressionLevel="high" />

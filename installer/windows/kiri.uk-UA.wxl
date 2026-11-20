@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  kiri.wxl in Ukrainian, over WixUI's own uk-UA strings. Built only when
+  asked: KIRI_MSI_CULTURE=uk-UA cargo xtask msi (xtask/src/main.rs).
+  Codepage 1251 holds Cyrillic in the MSI database.
+-->
+<WixLocalization xmlns="http://wixtoolset.org/schemas/v4/wxl" Culture="uk-UA" Codepage="1251">
+
+  <String Id="KiriLanguage" Value="1058" />
+  <String Id="KiriDowngrade" Value="Уже встановлено новішу версію [ProductName]." />
+
+  <String Id="WelcomeDlgTitle" Value="{\WixUI_Font_Bigger}Вас вітає майстер установлення [ProductName]" />
+  <!-- The box holds five lines at Segoe UI 9: three for the first paragraph, a blank, one more. -->
+  <String Id="WelcomeDlgDescription" Value="Майстер установить [ProductName] на ваш комп’ютер. Натисніть «Далі», щоб продовжити, або «Скасувати», щоб вийти.&#13;&#10;&#13;&#10;Docker у Windows без Docker Desktop." />
+
+  <!-- The ready page's table (KiriReadyDlg in kiri.wxs). -->
+  <String Id="KiriReadyTitle" Value="{\WixUI_Font_Title}Усе готово до встановлення [ProductName]" />
+  <String Id="KiriReadyFolder" Value="{\Kiri_Font_Label}Тека" />
+  <String Id="KiriReadySize" Value="{\Kiri_Font_Label}Розмір" />
+  <String Id="KiriReadyScope" Value="{\Kiri_Font_Label}Для кого" />
+  <String Id="KiriReadyScopeValue" Value="Лише для цього користувача" />
+
+  <String Id="ExitDialogTitle" Value="{\WixUI_Font_Bigger}Установлення [ProductName] завершено" />
+  <String Id="ExitDialogDescription" Value="Натисніть «Готово», щоб закрити майстер." />
+  <String Id="KiriExitText" Value="Під час першого запуску Kiri налаштує WSL 2 і свій Linux-рушій. Це займе кілька хвилин." />
+  <String Id="KiriExitCheckbox" Value="Запустити Kiri" />
+
+</WixLocalization>

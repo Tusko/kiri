@@ -1,5 +1,7 @@
 # Features
 
+**English** · [Українська](features.uk.md)
+
 What Kiri supports today, through the `kiri` Docker context.
 
 ## Platforms
@@ -92,7 +94,8 @@ Apple silicon and Intel Macs (macOS 14+), Windows 10 and 11 (x86-64 and Arm, thr
   needs no change to WSL's or Windows' network settings (`cargo xtask
   msi` builds `target/Kiri-<version>-x86_64.msi`, a per-user installer
   around `target/kiri-windows-x86_64`; `kiri.ps1` in that folder installs
-  the same without an MSI). Not TCP:
+  the same without an MSI; `KIRI_MSI_CULTURE=uk-UA cargo xtask msi` builds
+  the Ukrainian `Kiri-<version>-x86_64-uk-UA.msi`). Not TCP:
   WSL's localhost relay drops half-closes, and `docker run` loses its
   output
 

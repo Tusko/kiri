@@ -14,7 +14,8 @@
   <a href="https://runkiri.com/releases/">Download</a> ·
   <a href="docs/features.md">Features</a> ·
   <a href="docs/development.md">Build from source</a> ·
-  <a href="https://github.com/libracoder/kiri/releases">Releases</a>
+  <a href="https://github.com/libracoder/kiri/releases">Releases</a> ·
+  <a href="README.uk.md">Українська</a>
 </p>
 
 <p align="center">

@@ -2,10 +2,13 @@
 Type=Application
 Name=Kiri
 GenericName=Containers
+GenericName[uk]=Контейнери
 Comment=Run and share containers
+Comment[uk]=Запускайте контейнери й діліться ними
 Exec=/usr/lib/kiri/kiri-window ui
 Icon=/usr/share/icons/hicolor/scalable/apps/kiri.svg
 Terminal=false
 Categories=Development;
 Keywords=docker;containers;kubernetes;
+Keywords[uk]=docker;контейнери;kubernetes;
 StartupWMClass=kiri

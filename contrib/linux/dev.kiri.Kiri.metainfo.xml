@@ -8,16 +8,25 @@
   <project_license>Apache-2.0</project_license>
   <name>Kiri</name>
   <summary>Run and share containers</summary>
+  <summary xml:lang="uk">Запускайте контейнери й діліться ними</summary>
   <description>
     <p>
       Kiri is a tiny, fast container runtime that speaks the Docker Engine API,
       so the docker command, Compose and buildx work with it as they are.
     </p>
+    <p xml:lang="uk">
+      Маленьке й швидке середовище виконання контейнерів, сумісне з API Docker Engine:
+      команда docker, Compose і buildx працюють із Kiri без змін.
+    </p>
     <ul>
       <li>See and manage your containers, images, volumes and networks</li>
+      <li xml:lang="uk">Переглядайте контейнери, образи, томи й мережі та керуйте ними</li>
       <li>Build images and follow the build as it runs</li>
+      <li xml:lang="uk">Збирайте образи й стежте за збіркою наживо</li>
       <li>Share a container or a local port on the internet with one link</li>
+      <li xml:lang="uk">Діліться контейнером або локальним портом в інтернеті одним посиланням</li>
       <li>Run a small Kubernetes cluster</li>
+      <li xml:lang="uk">Запускайте невеликий кластер Kubernetes</li>
     </ul>
   </description>
   <launchable type="desktop-id">kiri.desktop</launchable>
@@ -32,6 +41,7 @@
   <keywords>
     <keyword>docker</keyword>
     <keyword>containers</keyword>
+    <keyword xml:lang="uk">контейнери</keyword>
     <keyword>kubernetes</keyword>
   </keywords>
   <provides>

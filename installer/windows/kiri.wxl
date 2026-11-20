@@ -7,6 +7,10 @@
 -->
 <WixLocalization xmlns="http://wixtoolset.org/schemas/v4/wxl" Culture="en-US" Codepage="1252">
 
+  <!-- The package's language (LCID); the database codepage is this file's. -->
+  <String Id="KiriLanguage" Value="1033" />
+  <String Id="KiriDowngrade" Value="A newer version of [ProductName] is already installed." />
+
   <String Id="WelcomeDlgTitle" Value="{\WixUI_Font_Bigger}Welcome to the [ProductName] Setup Wizard" />
   <!-- The box holds five lines at Segoe UI 9: three for the first paragraph, a blank, one more. -->
   <String Id="WelcomeDlgDescription" Value="The Setup Wizard will install [ProductName] on your computer. Click Next to continue or Cancel to exit the Setup Wizard.&#13;&#10;&#13;&#10;Docker on Windows, without Docker Desktop." />
